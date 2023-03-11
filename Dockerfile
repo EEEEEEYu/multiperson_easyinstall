@@ -45,4 +45,6 @@ RUN bash compile.sh
 RUN python3 setup.py develop
 WORKDIR ../sdf
 RUN python3 setup.py install
+WORKDIR ..
+RUN apt install -y libsm6 libxext6 libxrender-dev
 
