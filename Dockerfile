@@ -1,3 +1,6 @@
+# After building docker image, follow the current instructions to run the container!
+# https://docs.google.com/document/d/1-QxKYc98Jts67yGqR-jXCZbBvZQqMF1vyr2s0lpI-Nc/edit?usp=sharing
+
 # Refer to this page: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu
 FROM nvidia/cuda:10.0-devel-ubuntu18.04
 
@@ -46,5 +49,5 @@ RUN python3 setup.py develop
 WORKDIR ../sdf
 RUN python3 setup.py install
 WORKDIR ..
-RUN apt install -y libsm6 libxext6 libxrender-dev
+RUN apt-get install -y libsm6 libxext6 libxrender-dev libosmesa6-dev freeglut3-dev nvidia-utils-525
 
