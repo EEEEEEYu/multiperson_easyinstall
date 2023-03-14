@@ -49,5 +49,5 @@ RUN python3 setup.py develop
 WORKDIR ../sdf
 RUN python3 setup.py install
 WORKDIR ..
-RUN apt-get install -y libsm6 libxext6 libxrender-dev libosmesa6-dev freeglut3-dev nvidia-utils-525
+RUN apt-get install -y libsm6 libxext6 libxrender-dev libosmesa6-dev freeglut3-dev
 
